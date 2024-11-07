@@ -1,0 +1,8 @@
+<div class="main">
+    <div *ngIf="isLoading" class="loading-message">
+        Loading donuts...
+    </div>
+    <div *ngIf="!isLoading" class="card-holder">
+        <app-card *ngFor="let donut of donuts" [donut]="donut"></app-card>
+    </div>
+</div>

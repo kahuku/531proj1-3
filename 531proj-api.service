@@ -1,0 +1,11 @@
+[Unit]
+Description=Gunicorn instance to serve Flask 531proj-api
+After=network.target
+[Service]
+User=ec2-user
+Group=nginx
+WorkingDirectory=/home/ec2-user/531proj-api
+Environment="PATH=/home/ec2-user/531proj-api/venv/bin"
+ExecStart=/home/ec2-user/531proj-api/venv/bin/gunicorn --bind 0.0.0.0:5000 wsgi:app
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,29 @@
+<div class="card">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <div class="card-image">
+    <img src="{{ donut.imgSrc }}" alt="{{ donut.name }}" />
+  </div>
+  <div class="card-content">
+    <h2 class="press-start-2p-regular">{{ donut.name }}</h2>
+    <h3 class="roboto-mono">
+      {{
+        donut.price % 1 === 0
+          ? (donut.price | currency : "USD" : "symbol" : "1.0-0")
+          : (donut.price | currency : "USD" : "symbol" : "1.2-2")
+      }}
+    </h3>
+    <p class="roboto-mono">{{ donut.desc }}</p>
+    <p class="roboto-mono">{{ donut.rating }}</p>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.main {
+    padding: 1rem;
+}
+
+.card-holder {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    main {
+        margin: 4rem auto;
+        grid-template-columns: 1fr 3fr;
+        display: flex;
+        justify-content: center;
+    }
+}
