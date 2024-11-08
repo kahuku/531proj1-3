@@ -1,0 +1,12 @@
+#!/bin/bash
+
+isExistApp = `pgrep 531proj-api`
+if [[ -n  $isExistApp ]]; then
+    systemctl stop 531proj-api     
+fi
+
+isExistApp = `pgrep nginx`
+if [[ -n  $isExistApp ]]; then
+    systemctl stop nginx     
+fi
+
