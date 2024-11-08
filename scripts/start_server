@@ -2,5 +2,5 @@
 systemctl start nginx
 systemctl enable nginx
 
-systemctl start 531proj-api
-systemctl enable 531proj-api
+systemctl start backend
+systemctl enable backend
