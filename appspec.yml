@@ -3,12 +3,6 @@ os: linux
 files:
   - source: /backend/*
     destination: /home/ec2-user/backend/
-  - source: /531proj-api.conf
-    destination: /etc/nginx/conf.d/
-  - source: /proxy_params
-    destination: /etc/nginx/
-  - source: /531proj-api.service
-    destination: /etc/systemd/system/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
